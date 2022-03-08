@@ -16,8 +16,9 @@ int main()
 	for (int i = 0; i < N; i++) {
 		std::cin >> pos[i].first >> pos[i].second;
 	}
+	//10^5 * 10^5 이므로 int 범위 벗어남
 	int result = 0;
-	for (int i = 0; i < N; i++) {
+	for (int i = 0; i < N; i++) {		//신발끈 공식
 		result += pos[i].first * pos[(i + 1)%N].second;
 		result -= pos[(i + 1)%N].first * pos[i].second;
 	}
