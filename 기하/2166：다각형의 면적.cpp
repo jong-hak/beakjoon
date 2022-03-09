@@ -25,5 +25,4 @@ int main()
 	std::cout << std::fixed;
 	std::cout.precision(1);
 	std::cout << (double)abs(result) / 2;
-
 }
