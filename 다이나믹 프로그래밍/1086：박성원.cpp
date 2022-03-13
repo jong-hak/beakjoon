@@ -26,8 +26,8 @@ long long solve() {
 			if (i & bit) continue;
 			int next = bit | i;
 			for (int j = 0; j < K; j++) {
-				int r = ((j * remain[set[k].length()]) + remainS[k])%K;
-
+				int r = ((j * remain[set[k].length()]) + remainS[k])%K;	//  현재 i만큼 사용한 상태에서 나머지가 j인것에 k를 추가한 경우의 나머지
+															+=현재 i만큼 사용한 상태에서 나머지가 j인 것의 갯수
 				memoi[next][r] += memoi[i][j];
 			}
 		}
